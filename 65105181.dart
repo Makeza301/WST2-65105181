@@ -45,14 +45,16 @@ class Car {
   set engine(Engine value) => _engine = value;
 
   void displayCarInfo() {
-    print('Brand: $_brand, Model: $_model, Owner: ${_owner.name}, Engine: ${_engine.model}');
+    print('Model: $_model');
+    print('Owner: ${_owner.name}');
+    print('Engine: ${_engine.model}');
   }
 
   void run() {
     print('Running at ${_engine.speed} km/h');
+    print ('--------------------------------');
   }
 }
-
 class Honda extends Car {
   String _color;
 
@@ -64,7 +66,10 @@ class Honda extends Car {
 
   @override
   void displayCarInfo() {
-    print('Brand: $brand, Model: $model, Color: $_color, Owner: ${owner.name}, Engine: ${engine.model}');
+    print('Model: $model');
+    print('Color: $_color');
+    print('Owner: ${owner.name}');
+    print('Engine: ${engine.model}');
   }
 
   @override
@@ -75,13 +80,13 @@ class Honda extends Car {
 
 void main() {
   // Create a person
-  Person owner = Person('Alice');
+  Person owner = Person('Pannapong Phonprasit');
 
   // Create an engine
-  Engine engine = Engine('V8', 200.0);
+  Engine engine = Engine('V8', 220.0);
 
   // Create a car
-  Car car = Car('Toyota', 'Corolla', owner, engine);
+  Car car = Car('Mclaren', 'P1',owner, engine);
 
   // Display car information and run the car
   car.displayCarInfo();
